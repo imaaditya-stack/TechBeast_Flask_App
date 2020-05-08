@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+* { -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important; }
+
+body{
+	background-color: #F5F5F5;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.about span{
+	color: #0277bd;
+}
+
+nav li, .tag, .navbar-brand, .btn, label{
+letter-spacing: 2px;
+font-family: 'Quicksand', sans-serif;
+}
+
+h2, h1, h3{
+	font-family: 'Oswald', sans-serif;
+}
+
+.articles, .btn-link{
+	text-decoration: none;
+}
+
+.signupinfo, .about-content{
+	border: 1px solid #EEE;
+	border-left: 5px solid #ffc107;
+}
+
+.navbar-toggler{
+	border:none;
+}
+
+.navbar-brand{ 
+ font-family: 'Nunito', sans-serif;
+}
+
+.btn{
+	background-color: #0277BD;
+	color: #FFFFFF;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.flex-container{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.content img{
+	width:20%;
+}
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus { outline: none; box-shadow: none; }
+/*Heading
+font-family: 'Teko', sans-serif;*/
