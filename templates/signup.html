@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block body %}
+ <br>
+ <div class="text-center signupinfo bg-white rounded p-3">
+ 	<p>Already have an account ? <a class="btn-link" style="color: #0277bd;" href="{{ url_for('login') }}" role="button">Sign in</a></p>
+ 	<h4 class="mb-3" style="font-family: Oswald, sans-serif;">Create your Techbeast account</h4>
+ <p>Once you sign up, you're officially in the loop to explore stuff and hear our new releases !</p>
+ </div>
+ <br>
+ {% with messages = get_flashed_messages(with_categories=true) %}
+ {% if messages %}
+ {% for category, message in messages %}
+ <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert"> 
+ {{ message }}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+ <span aria-hidden="true">&times;</span> 
+ </button> 
+ </div>
+ {% endfor %}
+ {% endif %}
+ {% endwith %}
+	<form action="{{ url_for('signupsuccess') }}" method="POST" class="shadow-none bg-white rounded p-3 form mb-2"> 
+	<div class="form-group"> 
+	<label for="formGroupExampleInput">Username</label> 
+	<input type="text" class="form-control form-control-lg shadow-none" id="formGroupExampleInput" required name="name">	
+	</div> 
+	<div class="form-group">
+	<label for="formGroupExampleInput2">Email</label> 
+	<input type="text" class="form-control form-control-lg shadow-none" id="formGroupExampleInput2" required name="email"> 
+	</div> 
+	<div class="form-group"> 
+	<label for="formGroupExampleInput3">Password</label> 
+	<input type="password" class="form-control form-control-lg shadow-none" id="formGroupExampleInput3" placeholder="" required name="pass"> 
+	</div> 
+	<div class="form-group"> 
+	<label for="formGroupExampleInput4">Confirm Password</label> 
+	<input type="password" class="form-control form-control-lg shadow-none" id="formGroupExampleInput4" placeholder="" required name="cpass"> 
+	</div>
+	<button type="submit" class="btn btn-block btn-lg p-2 text-uppercase">Sign up</button> 
+	</form>
+ </div>
+{% endblock %}
