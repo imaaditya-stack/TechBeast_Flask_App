@@ -32,28 +32,28 @@
 	<span class="sr-only">(current)</span></a> 
 	</li> 
 	<li class="nav-item"> 
-	<a class="nav-link" href="http://127.0.0.1:5000/about">About</a> 
+	<a class="nav-link" href="{{ url_for('about') }}">About</a> 
 	</li> 
 	<li class="nav-item"> 
 	</li> 
 	{% if session.username == "Aaditya Ghag" %}
 	<li class="nav-item">
-	<a class="nav-link" href="http://127.0.0.1:5000/postarticle">Add article</a> 
+	<a class="nav-link" href="{{ url_for('postarticle') }}">Add article</a> 
 	</li> 
 	{% endif %}
 	{% if session.logged_in %}
 	<li class="nav-item">
-	<a class="nav-link" href="http://127.0.0.1:5000/articles">articles</a> 
+	<a class="nav-link" href="{{ url_for('articles') }}">articles</a> 
 	</li>
 	<li class="nav-item">
-	<a class="nav-link" href="http://127.0.0.1:5000/logout">log out</a> 
+	<a class="nav-link" href="{{ url_for('logout') }}">log out</a> 
 	</li>
 	{% endif %}
 	</ul> 
 	</div> 
 	</nav>
 	<br>
-		<br>
+         <br>
 	<div class="container">
 	{% block body %}{% endblock %}
 	</div>
