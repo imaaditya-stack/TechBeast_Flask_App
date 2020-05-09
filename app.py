@@ -215,5 +215,7 @@ def preview():
 def about():
     return render_template("about.html")
 
-db.create_all()
-app.run(debug=True,port=5000)
+
+if __name__ == '__main__':
+    db.create_all()
+    app.run(debug=True)
