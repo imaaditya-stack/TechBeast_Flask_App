@@ -85,9 +85,9 @@ def signup():
     
     return render_template("signup.html")
 
-@app.route("/signupsuccess", methods=["GET", "POST"])
+@app.route("/signedup", methods=["GET", "POST"])
 
-def signupsuccess():
+def signedup():
     
     if request.method == "POST":
         
