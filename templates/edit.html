@@ -2,7 +2,7 @@
 
 {% block body %}
 <br>
-<form action="http://127.0.0.1:5000/articles" method="POST" class="shadow-sm bg-white rounded p-3"> 
+<form action="" method="POST" class="shadow-sm bg-white rounded p-3"> 
 <div class="form-group"> 
 <label for="formGroupExampleInput">Article Title</label> 
 <input value="{{article.title}}" type="text" class="form-control title shadow-none" id="formGroupExampleInput" placeholder="" name="title" required> 
@@ -19,8 +19,8 @@
 <label for="tag">Tags</label> <br>
 <input class="form-control shadow-none" type="text" placeholder="" name="tag" id="tag" required value="{{article.tags}}">
 <input class="form-control form-control-sm  mb-3" type="text" placeholder="Eg : Python, React.js, Machine Learning, etc." readonly>
-<button type="submit" formaction="http://127.0.0.1:5000/preview" class="btn mb-2 btn-block shadow-none">PREVIEW</button>
-<button type="submit" formaction="http://127.0.0.1:5000/update/{{ article.id }}" class="btn mb-2 btn-block shadow-none">UPDATE</button>
+<button type="submit" formaction="{{ url_for('preview') }}" class="btn mb-2 btn-block shadow-none">PREVIEW</button>
+<button type="submit" formaction="https://techbeast.herokuapp.com/update/{{ article.id }}" class="btn mb-2 btn-block shadow-none">UPDATE</button>
 <script> CKEDITOR.replace( 'editor' ); </script>
 </form>
 
