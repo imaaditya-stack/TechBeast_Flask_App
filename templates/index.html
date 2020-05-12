@@ -22,13 +22,13 @@
 </head> 
 <body>
 	<nav class="shadow-none bg-white navbar navbar-light navbar-expand-sm mb-2 fixed-top font-weight-bold" style="background-color: #F5F5F5; font-family: 'Quicksand', sans-serif; "> 
-	<a class="navbar-brand text-uppercase" href="http://127.0.0.1:5000/"><i class="fa fa-code font-weight-bold" aria-hidden="true" style="color: #0277bd;"></i> Tech<span style="color: #0277BD;">beast</span></a> 
+	<a class="navbar-brand text-uppercase" href="{{ url_for('home') }}"><i class="fa fa-code font-weight-bold" aria-hidden="true" style="color: #0277bd;"></i> Tech<span style="color: #0277BD;">beast</span></a> 
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
 	<span class="navbar-toggler-icon"></span> 
 	</button> 
 	<div class="collapse navbar-collapse text-center" id="navbarNav"> 
 	<ul class="navbar-nav text-uppercase"> 
-	<li class="nav-item active"> <a class="nav-link" href="http://127.0.0.1:5000/">Home 
+	<li class="nav-item active"> <a class="nav-link" href="{{ url_for('home') }}">Home 
 	<span class="sr-only">(current)</span></a> 
 	</li> 
 	<li class="nav-item"> 
