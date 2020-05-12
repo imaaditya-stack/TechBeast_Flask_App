@@ -37,7 +37,7 @@
 		<p style="color: #0277BD; font-size: 12px;">
 			<i class="fa fa-calendar" aria-hidden="true"></i> {{ article.date_created.date().strftime("%B")}} {{ article.date_created.date().day }},{{ article.date_created.date().year }}     <i class="fa fa-user" aria-hidden="true"></i> Aditya Ghag</p>
 			<div style="font-size: 15px;">{{ article.content[:100] | safe }}...</div>
-			<a class="btn-link text-uppercase" href="http://127.0.0.1:5000/articles/{{ article.id }}" role="button" style="color: #0277BD; font-size: 12px;">read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+			<a class="btn-link text-uppercase" href="https://techbeast.herokuapp.com/articles/{{ article.id }}" role="button" style="color: #0277BD; font-size: 12px;">read more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 </div>
 <br>
 	{% endfor %}
