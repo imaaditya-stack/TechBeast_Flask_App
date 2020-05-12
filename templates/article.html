@@ -16,7 +16,7 @@
  {% endwith %}
  
 <div class="p-1" style="font-size:12px;">
-	<p> <a href="http://127.0.0.1:5000/articles">Home</a> > {{ article.category }} > {{ article.title }} </p>
+	<p> <a href="{{ url_for('articles') }}">Home</a> > {{ article.category }} > {{ article.title }} </p>
 </div>
 </nav>
 <div class="shadow-none bg-white rounded p-3 article">
@@ -34,7 +34,7 @@
 {% if session.username == "Aaditya Ghag" %}
 <br>
 <form>
-<button type="submit" formaction="http://127.0.0.1:5000/edit/{{ article.id }}" class="btn mb-2 btn-block shadow-none">EDIT ARTICLE</button>
+<button type="submit" formaction="https://techbeast.herokuapp.com/articles/edit/{{ article.id }}" class="btn mb-2 btn-block shadow-none">EDIT ARTICLE</button>
 </form>
 
 <button type="button" class="btn btn-block mb-3 shadow-none" data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#d50000"> DELETE ARTICLE </button> 
@@ -54,7 +54,7 @@
 </div> 
 <div class="modal-footer">
 <form>
-<button type="submit" formaction="http://127.0.0.1:5000/delete/{{ article.id }}" class="btn" style="background-color:#d50000">Yes</button>
+<button type="submit" formaction="https://techbeast.herokuapp.com/articles/delete/{{ article.id }}" class="btn" style="background-color:#d50000">Yes</button>
 </form> 
 <button type="button" class="btn" data-dismiss="modal">No</button> 
 </div> 
