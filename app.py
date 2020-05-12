@@ -20,11 +20,6 @@ class Users(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
 
-    def __init__(self, username, email, password):
-        self.username = username
-        self.email = email
-        self.password = password
-
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
@@ -32,9 +27,6 @@ class Post(db.Model):
     category = db.Column(db.String(200), nullable=False)
     tags = db.Column(db.Text, nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) 
-
-    def __repr__(self):
-        return f"Post('{self.title}', '{self.date_posted}')"
         
 @app.route("/")
 
