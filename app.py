@@ -29,7 +29,9 @@ class Post(db.Model):
     category = db.Column(db.String(200), nullable=False)
     tags = db.Column(db.Text, nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) 
-        
+
+db.create_all()
+       
 @app.route("/")
 
 def home(): 
@@ -115,7 +117,7 @@ def signedup():
             
     else:
             
-        user =  Users(name, email, _hashpass)
+        user =  Users(username=name, email=email, password=_hashpass)
         db.session.add(user)
         db.session.commit()
         return render_template("login.html", msg = True)
@@ -211,5 +213,4 @@ def about():
 
 
 if __name__ == '__main__':
-    db.create_all()
     app.run(debug=True)
