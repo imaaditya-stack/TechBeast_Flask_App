@@ -34,7 +34,7 @@
 {% if session.username == "Aaditya Ghag" %}
 <br>
 <form>
-<button type="submit" formaction="https://techbeast.herokuapp.com/articles/edit/{{ article.id }}" class="btn mb-2 btn-block shadow-none">EDIT ARTICLE</button>
+<button type="submit" formaction="https://techbeast.herokuapp.com/edit/{{ article.id }}" class="btn mb-2 btn-block shadow-none">EDIT ARTICLE</button>
 </form>
 
 <button type="button" class="btn btn-block mb-3 shadow-none" data-toggle="modal" data-target="#exampleModalCenter" style="background-color:#d50000"> DELETE ARTICLE </button> 
@@ -54,7 +54,7 @@
 </div> 
 <div class="modal-footer">
 <form>
-<button type="submit" formaction="https://techbeast.herokuapp.com/articles/delete/{{ article.id }}" class="btn" style="background-color:#d50000">Yes</button>
+<button type="submit" formaction="https://techbeast.herokuapp.com/delete/{{ article.id }}" class="btn" style="background-color:#d50000">Yes</button>
 </form> 
 <button type="button" class="btn" data-dismiss="modal">No</button> 
 </div> 
