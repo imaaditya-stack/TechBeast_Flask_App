@@ -31,6 +31,8 @@ class Post(db.Model):
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) 
 
        
+db.create_all()
+
 @app.route("/")
 
 def home(): 
@@ -216,5 +218,4 @@ def about():
 
 
 if __name__ == '__main__':
-    db.create_all()
     app.run(debug=True)
