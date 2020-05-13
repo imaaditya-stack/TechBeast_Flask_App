@@ -30,7 +30,6 @@ class Post(db.Model):
     tags = db.Column(db.Text, nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) 
 
-db.create_all()
        
 @app.route("/")
 
@@ -217,4 +216,5 @@ def about():
 
 
 if __name__ == '__main__':
+    db.create_all()
     app.run(debug=True)
