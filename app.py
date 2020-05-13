@@ -45,6 +45,12 @@ def login():
     
     return render_template("login.html")
 
+@app.route("/newlogin") 
+
+def newlogin():
+    
+    return render_template("login.html",msg=True)
+
 def is_logged_in(f):
     @wraps(f)
     def wrap(*args, **kwargs):
@@ -120,12 +126,10 @@ def signedup():
         user =  Users(username=name, email=email, password=_hashpass)
         db.session.add(user)
         db.session.commit()
-        return render_template("login.html", msg = True)
+        return render_template("signupinfo.html")
     
-    return render_template("main.html")
     
 @app.route("/getstarted")
-@is_logged_in
 def getstarted():
     
     return render_template("signupinfo.html")
