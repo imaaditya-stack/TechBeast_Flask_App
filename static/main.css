@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 * { -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important; }
 
@@ -19,8 +18,8 @@ letter-spacing: 2px;
 font-family: 'Quicksand', sans-serif;
 }
 
-h2, h1, h3{
-	font-family: 'Oswald', sans-serif;
+h2, h1, h3, h4, h5{
+	font-family: 'Open Sans', sans-serif;
 }
 
 .articles, .btn-link{
@@ -44,6 +43,12 @@ h2, h1, h3{
 	background-color: #0277BD;
 	color: #FFFFFF;
 	font-family: 'Quicksand', sans-serif;
+	outline: none;
+}
+
+.btn:hover{
+	outline:none;
+	box-shadow:none;
 }
 
 .flex-container{
@@ -54,6 +59,23 @@ h2, h1, h3{
 .content img{
 	width:20%;
 }
+
+.signupinfo-btn{
+	background-color:#fff;
+	border:2px #0277bd solid;
+}
+
+.signupinfo-btn:hover{
+	background-color:#0277bd;
+	color:#fff;
+	outline:none;
+	transition:0.3s;
+}
+
+.signupinfo-btn i{
+	font-size:40px;
+}
+
 .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus { outline: none; box-shadow: none; }
 /*Heading
 font-family: 'Teko', sans-serif;*/
