@@ -19,7 +19,7 @@
 	<p> <a href="{{ url_for('articles') }}"><span style="color: #0277BD;">Home</a></span> > {{ article.category }} > {{ article.title }} </p>
 </div>
 </nav>
-<div class="shadow-none bg-white rounded p-3 article">
+<div class="shadow-none bg-white rounded p-3 article animated fadeIn">
 	<div class="flex-container">
 	{% for tag in article.tags.split(",") %}
 	<span class="m-1 bg-light tag text-muted p-2 text-uppercase">{{ tag }}</span>
