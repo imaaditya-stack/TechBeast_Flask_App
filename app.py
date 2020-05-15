@@ -135,6 +135,12 @@ def getstarted():
     
     return render_template("signupinfo.html")
 
+@app.route("/admin")
+@is_logged_in
+def admin():
+    
+    return render_template("admin.html", users=Users.query.all())
+
 @app.route("/logout")   
 @is_logged_in
 def logout():
