@@ -8,7 +8,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://xcbdamqlfrltgj:53257ae3e7552105f63c243b98ec7bb2a94d6ce433aa2064f9da648968fda214@ec2-52-87-135-240.compute-1.amazonaws.com:5432/d5guaf6q2gvrbt'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mycpubiqklxocs:f9952ab8683f17b940eabef9323770d8c1bf552158c2fa87623b71b26c6d0a1f@ec2-52-44-55-63.compute-1.amazonaws.com:5432/d5dagnhulmn1si'
 
 db = SQLAlchemy(app)
 
