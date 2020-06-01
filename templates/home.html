@@ -3,25 +3,24 @@
 {% block body %}
 <br>
 <div class="shadow-none bg-white rounded p-3 form text-center animated fadeIn"> 
-<h1 class="text-uppercase">Welcome, <br> to <span style="color: #0277BD;">TechBeast</span>.</h1> 
-<p class="lead">A new generation platform for developers.
-Explore AI, Deep Learning, Machine Learning stuff.</p> 
-<hr class="my-4"> 
-<a class="btn mb-3 btn-block text-uppercase p-2 text-light" href="{{ url_for('login') }}" role="button" style="background-color: #0277BD;">Login to Techbeast</a> 
-	<p class="text-center">Don't have an account?<p>
-<a class="btn btn-block text-uppercase p-2 text-light" href="{{ url_for('signup') }}" role="button" style="background-color: #0277BD;">grab a seat</a> 
+ <h1 class="text-uppercase">Welcome, <br> to <span style="color: #0277BD;">TechBeast</span>.</h1> 
+ <p class="lead">A new generation platform for developers.
+  Explore AI, Deep Learning, Machine Learning stuff.</p> 
+  <a class="btn mb-3 btn-block text-uppercase p-2 text-light" href="{{ url_for('login') }}" role="button" style="background-color: #0277BD;">Login to Techbeast</a> 
+  <p class="text-center">Don't have an account?<p>
+  <a class="btn btn-block text-uppercase p-2 text-light" href="{{ url_for('signup') }}" role="button" style="background-color: #0277BD;">grab a seat</a> 
 </div>
 <br>
 <div class="shadow-none bg-dark text-light rounded p-3 text-center">
-	<h2>Our Motto</h2>
-	<h3>Learn, <span style="color: #0277bd">Code</span>, Tweak, <span style="color: #0277bd">Repeat.<h3>
+ <h2>Our Motto</h2>
+ <h3>Learn, <span style="color: #0277bd">Code</span>, Tweak, <span style="color: #0277bd">Repeat.<h3>
 </div>
 <br>
 <div class="shadow-sm text-center bg-white rounded p-3 mb-3">
-	<img class="w-25 mb-2" src="https://i.ibb.co/fvqCHVC/color.png" alt="color" border="0"><br>
-	<h2 class="text-uppercase mb-2">artificial intelligence</h2>
-	<p style="font-size:14px;">Artificial intelligence (AI) is an area of computer science that emphasizes the creation of
-	intelligent machines that work and react like humans.
+ <img class="w-25 mb-2" src="https://i.ibb.co/fvqCHVC/color.png" alt="color" border="0"><br>
+ <h2 class="text-uppercase mb-2">artificial intelligence</h2>
+ <p style="font-size:14px;">Artificial intelligence (AI) is an area of computer science that emphasizes the creation of
+    intelligent machines that work and react like humans.
 	Follow <strong>Techbeast</strong> and you'll have enough knowledge 
 	to start applying AI algorithms to your own projects. </p>
 	</p>
@@ -36,5 +35,16 @@ more popular for Machine Learning and Deep Learning stuff.
 	Follow <strong>Techbeast</strong> to learn Python for Data Science.</p>
 	</p>
 	<a class="btn btn-block text-uppercase p-2 text-light" href="{{ url_for('signup') }}" role="button" style="background-color: #0277BD;">start my first lesson</a> 
+	</div>
+  <div class="shadow text-center bg-white rounded p-3 mb-3">
+	<img class="w-25 mb-2" src="https://i.ibb.co/hKfVyM1/united.png" alt="united" border="0">
+	<h3 class="text-uppercase mb-2">Collaborate</h3>
+	<p class="text-muted">Are you interested for being involved in Techbeast? 
+	Techbeast is a great platform to share your knowledge. You can 
+	post your own articles, code, and other stuff.
+	We will review it and then post it on Techbeast officially.	
+	</p>
+	</p>
+	<a class="btn btn-block text-uppercase p-2" href="{{ url_for ('signup') }}" role="button" style="background-color: #0277BD;">Take me in</a> 
 	</div>
 {% endblock %}
