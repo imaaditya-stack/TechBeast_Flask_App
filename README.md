@@ -3,7 +3,7 @@ I have utilisied the COVID-19 lockdown period in the optimum way by creating thi
 
 ## Technology Stack :
 
-Frontend : HTML, CSS, Bootstrap
-Backend : Python, Flask Web Framework
-Database : SQLAlchemy, PostgresSQL
-Deployment : Heroku
+1. Frontend : HTML, CSS, Bootstrap
+2. Backend : Python, Flask Web Framework
+3. Database : SQLAlchemy, PostgresSQL
+4. Deployment Platform : Heroku
