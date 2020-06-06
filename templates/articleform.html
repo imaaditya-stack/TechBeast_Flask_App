@@ -1,31 +1,25 @@
 {% extends 'index.html' %}
-
 {% block body %}
 <br>
-<form action="{{ url_for('articles') }}" method="POST" class="shadow-sm bg-white rounded p-3"> 
-<div class="form-group"> 
-<label for="formGroupExampleInput">Article Title</label> 
-<input type="text" class="form-control title shadow-none" id="formGroupExampleInput" placeholder="" name="title" required> 
-</div>
-<script src="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
-<label for="post_content">Article Content</label> 
-<textarea name="editor" id="post_content" required></textarea> 
-<br>
-	<label for="cat">Category</label> 
-<input class="form-control shadow-none" type="text" id="cat" placeholder="" name="cat" required>
-<input class="form-control form-control-sm mb-3" type="text" placeholder="Eg : Tech, Entertainment, News, etc." readonly>
-<label for="tag">Tags</label> <br>
-<input class="form-control shadow-none" type="text" placeholder="" name="tag" id="tag" required>
-<input class="form-control form-control-sm  mb-3" type="text" placeholder="Eg : Python, React.js, Machine Learning, etc." readonly>
-<button type="submit" formaction="{{ url_for('preview') }}" class="btn mb-2 btn-block">PREVIEW</button>
-<button type="submit" class="btn mb-2 btn-block">PUBLISH</button>
-
-<script>
-
-CKEDITOR.replace( 'editor' );
-
-</script>
-
+<form action="{{ url_for('articles') }}" method="POST" class="shadow-sm bg-white rounded p-3">
+   <div class="form-group"> 
+      <label for="formGroupExampleInput">Article Title</label> 
+      <input type="text" class="form-control title shadow-none" id="formGroupExampleInput" placeholder="" name="title" required> 
+   </div>
+   <script src="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
+   <label for="post_content">Article Content</label> 
+   <textarea name="editor" id="post_content" required></textarea>
+   <br>
+   <label for="cat">Category</label> 
+   <input class="form-control shadow-none" type="text" id="cat" placeholder="" name="cat" required>
+   <input class="form-control form-control-sm mb-3" type="text" placeholder="Eg : Tech, Entertainment, News, etc." readonly>
+   <label for="tag">Tags</label> <br>
+   <input class="form-control shadow-none" type="text" placeholder="" name="tag" id="tag" required>
+   <input class="form-control form-control-sm  mb-3" type="text" placeholder="Eg : Python, React.js, Machine Learning, etc." readonly>
+   <button type="submit" formaction="{{ url_for('preview') }}" class="btn mb-2 btn-block">PREVIEW</button>
+   <button type="submit" class="btn mb-2 btn-block">PUBLISH</button>
+   <script>
+      CKEDITOR.replace( 'editor' );
+   </script>
 </form>
-
 {% endblock %}
