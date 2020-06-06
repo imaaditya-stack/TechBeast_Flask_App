@@ -1,18 +1,17 @@
 {% extends 'index.html' %}
-
 {% block body %}
 <br>
 <div class="shadow-none bg-white rounded p-3 article">
-	<div class="flex-container">
-	{% for tag in tags.split(",") %}
-	<span class="m-1 bg-light tag text-muted p-2 text-uppercase">{{ tag }}</span>
-	{% endfor %}
-	</div>
-	<br>
-	<h2 class="article-title">{{ title }}</h2>
-	<hr>
-		<p style="color: #0277BD; font-size: 12px;"><i class="fa fa-calendar" aria-hidden="true"></i> May 3, 2020 by <i class="fa fa-user" aria-hidden="true"></i> {{ session.username }}</p>
-			<div class="" style="color: #37474F; font-size: 16px;" >{{ content | safe }}</div>
+   <div class="flex-container">
+      {% for tag in tags.split(",") %}
+      <span class="m-1 bg-light tag text-muted p-2 text-uppercase">{{ tag }}</span>
+      {% endfor %}
+   </div>
+   <br>
+   <h2 class="article-title">{{ title }}</h2>
+   <hr>
+   <p style="color: #0277BD; font-size: 12px;"><i class="fa fa-calendar" aria-hidden="true"></i> May 3, 2020 by <i class="fa fa-user" aria-hidden="true"></i> {{ session.username }}</p>
+   <div class="" style="color: #37474F; font-size: 16px;" >{{ content | safe }}</div>
 </div>
 <br>
 {% endblock %}
