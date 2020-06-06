@@ -1,29 +1,28 @@
 {% extends 'index.html' %}
-
 {% block body %}
 <br>
 <div class="text-center">
-<h3>ADMIN</h3>
-<p>Showing all users of Techbeast.</p>
+   <h3>ADMIN</h3>
+   <p>Showing all users of Techbeast.</p>
 </div>
 <div class="bg-white" style="overflow:auto;">
-<table class="table table-striped">
-<thead class="thead-dark"> 
-<tr> 
-<th scope="col">Id</th> 
-<th scope="col">Username</th> 
-<th scope="col">Email</th> 
-</tr> 
-</thead> 
-<tbody> 
-{% for user in users %}
-<tr> 
-<th scope="row">{{ user.id }}</th> 
-<td>{{ user.username }}</td> 
-<td>{{ user.email }}</td> 
-</tr>
-{% endfor %}
-</tbody>
-</table>
+   <table class="table table-striped">
+      <thead class="thead-dark">
+         <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+         </tr>
+      </thead>
+      <tbody>
+         {% for user in users %}
+         <tr>
+            <th scope="row">{{ user.id }}</th>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+   </table>
 </div>
 {% endblock %}
