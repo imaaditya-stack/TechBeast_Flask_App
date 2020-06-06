@@ -8,11 +8,11 @@ from datetime import datetime
 app = Flask(__name__)
 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mycpubiqklxocs:f9952ab8683f17b940eabef9323770d8c1bf552158c2fa87623b71b26c6d0a1f@ec2-52-44-55-63.compute-1.amazonaws.com:5432/d5dagnhulmn1si'
+#app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
 db = SQLAlchemy(app)
 
-app.secret_key = "151FAHUI216892GAOP"
+#app.secret_key = "151FAHUI216892GAOP"
 
 class Users(db.Model):
     __tablename__ = 'users'
@@ -29,27 +29,20 @@ class Post(db.Model):
     category = db.Column(db.String(200), nullable=False)
     tags = db.Column(db.Text, nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow) 
-
        
 db.create_all()
 
 @app.route("/")
-
 def home(): 
-
     session.clear()
     return render_template("home.html")
 
 @app.route("/login") 
-
-def login():
-    
+def login():  
     return render_template("login.html")
 
 @app.route("/newlogin") 
-
 def newlogin():
-    
     return render_template("login.html",msg=True)
 
 def is_logged_in(f):
@@ -64,7 +57,6 @@ def is_logged_in(f):
 
 @app.route("/success", methods=["GET", "POST"])
 def loginsuccess():
-    
     if request.method == "POST":
         
         email = request.form["email"]
@@ -83,15 +75,11 @@ def loginsuccess():
         return redirect(url_for("login"))
 
 @app.route("/signup")
-
 def signup():
-    
     return render_template("signup.html")
 
 @app.route("/signedup", methods=["GET", "POST"])
-
 def signedup():
-    
     if request.method == "POST":
         
         name = request.form["name"]
@@ -129,32 +117,26 @@ def signedup():
         db.session.commit()
         return render_template("signupinfo.html")
     
-    
 @app.route("/getstarted")
 def getstarted():
-    
     return render_template("signupinfo.html")
 
 @app.route("/admin")
 @is_logged_in
 def admin():
-    
     return render_template("admin.html", users=Users.query.all())
 
 @app.route("/logout")   
 @is_logged_in
 def logout():
-       
     session.clear()
     flash("You are logged out, see you soon :)", "success")
     return render_template("login.html")       
-
 
 @app.route("/postarticle")   
 @is_logged_in
 def postarticle():
     return render_template("articleform.html")
-
 
 @app.route("/articles", methods=["GET", "POST"])   
 @is_logged_in
@@ -221,7 +203,6 @@ def preview():
 @app.route("/about")
 def about():
     return render_template("about.html")
-
 
 if __name__ == '__main__':
     app.run(debug=True)
