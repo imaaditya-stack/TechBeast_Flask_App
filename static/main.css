@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap');
-* { -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important;}
+
+* { 
+-webkit-border-radius: 0 !important;
+-moz-border-radius: 0 !important; 
+border-radius: 0 !important;
+}
 
 body{
-	overflow-x: hidden;
-	font-family: 'Catamaran', sans-serif;
+overflow-x: hidden;
+font-family: 'Catamaran', sans-serif;
 }
 
 .about span{
-	color: #0277bd;
+color: #0277bd;
 }
 
 nav li, .tag, .navbar-brand, .btn, label{
@@ -18,57 +23,60 @@ font-family: 'Quicksand', sans-serif;
 }
 
 h2, h1, h3, h4, h5{
-	font-family: 'Jost', sans-serif;
+font-family: 'Jost', sans-serif;
 }
 
 .articles, .btn-link{
-	text-decoration: none;
+text-decoration: none;
 }
 
 .signupinfo, .about-content{
-	border: 1px solid #EEE;
-	border-left: 5px solid #ffc107;
+border: 1px solid #EEE;
+border-left: 5px solid #ffc107;
 }
 
 .navbar-toggler{
-	border:none;
+border:none;
 }
 
 .btn{
-	background-color: #0277BD;
-	color: #FFFFFF;
-	font-family: 'Quicksand', sans-serif;
-	outline: none;
+background-color: #0277BD;
+color: #FFFFFF;
+font-family: 'Quicksand', sans-serif;
+outline: none;
 }
 
 .btn:hover{
-	outline:none;
-	box-shadow:none;
+outline:none;
+box-shadow:none;
 }
 
 .flex-container{
-	display:flex;
-	flex-wrap: wrap;
+display:flex;
+flex-wrap: wrap;
 }
 
 .content img{
-	width:20%;
+width:20%;
 }
 
 .signupinfo-btn{
-	background-color:#fff;
-	border:2px #0277bd solid;
+background-color:#fff;
+border:2px #0277bd solid;
 }
 
 .signupinfo-btn:hover{
-	background-color:#0277bd;
-	color:#fff;
-	outline:none;
-	transition:0.3s;
+background-color:#0277bd;
+color:#fff;
+outline:none;
+transition:0.3s;
 }
 
 .signupinfo-btn i{
-	font-size:40px;
+font-size:40px;
 }
 
-.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus { outline: none; box-shadow: none; }
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus{ 
+outline: none; 
+box-shadow: none; 
+}
