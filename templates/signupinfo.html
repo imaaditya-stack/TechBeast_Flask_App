@@ -1,30 +1,29 @@
 {% extends 'index.html' %}
-
 {% block body %}
 <br>
 <div class="text-center p-3 mt-3">
-<h4>What brings you to Techbeast?</h4>
-<p>Selects the options that best 
-describe you. Don't worry, you can
-explore other options later.
-<button class="signupinfo-btn p-5 mt-5 rounded animated slideInLeft">
-		<img class="w-50 mb-2" src="https://i.ibb.co/XXS0xHB/man.png" alt="man" border="0">
-		<h5>I'm a developer looking
-		to share my work</h5>
-			<p>The best place to showcase your work
-			and find your next oppurtunity.</p>
-</button>
-<br><br>
-<button class="signupinfo-btn p-5 mt-5 rounded animated slideInLeft">
-		<img class="ml-4 w-50 mb-2"src="https://i.ibb.co/P4msSn1/file.png" alt="file" border="0">
-		<h5>I'm a learner looking for inspiration</h5>
-			<p>Techbeast will soon be a
-			leading source for inspiration.
-				Start discovering today.
-			</p>
-</button>
-<br>
-<a class="btn mt-5 btn-block text-uppercase p-2 text-light shadow-none" href="{{ url_for('newlogin') }}" role="button" style="background-color: #0277BD;">Proceed to Login</a> 
+   <h4>What brings you to Techbeast?</h4>
+   <p>
+      Selects the options that best 
+      describe you. Don't worry, you can
+      explore other options later.
+      <button class="signupinfo-btn p-5 mt-5 rounded animated slideInLeft">
+         <img class="w-50 mb-2" src="https://i.ibb.co/XXS0xHB/man.png" alt="man" border="0">
+   <h5>I'm a developer looking
+   to share my work</h5>
+   <p>The best place to showcase your work
+   and find your next oppurtunity.</p>
+   </button>
+   <br><br>
+   <button class="signupinfo-btn p-5 mt-5 rounded animated slideInLeft">
+      <img class="ml-4 w-50 mb-2"src="https://i.ibb.co/P4msSn1/file.png" alt="file" border="0">
+      <h5>I'm a learner looking for inspiration</h5>
+      <p>Techbeast will soon be a
+         leading source for inspiration.
+         Start discovering today.
+      </p>
+   </button>
+   <br>
+   <a class="btn mt-5 btn-block text-uppercase p-2 text-light shadow-none" href="{{ url_for('newlogin') }}" role="button" style="background-color: #0277BD;">Proceed to Login</a> 
 </div>
-
 {% endblock %}
