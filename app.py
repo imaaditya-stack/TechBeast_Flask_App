@@ -8,11 +8,11 @@ from datetime import datetime
 app = Flask(__name__)
 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-#app.config['SQLALCHEMY_DATABASE_URI'] = ''
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
 db = SQLAlchemy(app)
 
-#app.secret_key = "151FAHUI216892GAOP"
+app.secret_key = "151FAHUI216892GAOP"
 
 class Users(db.Model):
     __tablename__ = 'users'
